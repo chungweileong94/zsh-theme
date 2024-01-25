@@ -43,4 +43,4 @@ function git_prompt() {
   fi
 
 }
-PROMPT='▷ $dir $(git_prompt)'
+PROMPT='$logo $dir $(git_prompt)'
