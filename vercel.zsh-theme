@@ -1,5 +1,5 @@
 local resetColor="%{$reset_color%}"
-local username="%{$fg_bold[white]%}$USER$resetColor$resetColor"
+local username="%{$fg_bold[white]%}%n$resetColor$resetColor"
 local dir="%{$fg_bold[white]%}%c$resetColor$resetColor"
 
 
