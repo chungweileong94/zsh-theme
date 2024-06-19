@@ -1,5 +1,5 @@
 local resetColor="%{$reset_color%}"
-local logo="%{$fg_bold[white]%}▲$resetColor$resetColor"
+local username="%{$fg_bold[white]%}$USER$resetColor$resetColor"
 local dir="%{$fg_bold[white]%}%c$resetColor$resetColor"
 
 
@@ -43,4 +43,4 @@ function git_prompt() {
   fi
 
 }
-PROMPT='$logo $dir $(git_prompt)'
+PROMPT='$username @ $dir $(git_prompt)'
