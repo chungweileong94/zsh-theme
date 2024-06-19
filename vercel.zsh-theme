@@ -43,4 +43,4 @@ function git_prompt() {
   fi
 
 }
-PROMPT='$username @ $dir $(git_prompt)'
+PROMPT='$username@ $dir $(git_prompt)'
