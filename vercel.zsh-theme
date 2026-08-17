@@ -1,7 +1,10 @@
 local resetColor="%{$reset_color%}"
+local hostname=""
+if [[ -n "$SSH_CONNECTION" || -n "$SSH_TTY" || -n "$SSH_CLIENT" ]]; then
+  hostname="(%{$fg_bold[white]%}%m$resetColor$resetColor) "
+fi
 local username="%{$fg_bold[white]%}%n$resetColor$resetColor"
 local dir="%{$fg_bold[white]%}%c$resetColor$resetColor"
-
 
 GIT_PROMPT_PREFIX="[%{$fg_bold[white]%}"
 GIT_PROMPT_SUFFIX="$resetColor] "
@@ -43,4 +46,4 @@ function git_prompt() {
   fi
 
 }
-PROMPT='$username@ $dir $(git_prompt)'
+PROMPT='$hostname$username@ $dir $(git_prompt)'
